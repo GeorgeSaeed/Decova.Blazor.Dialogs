@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Decova.Blazor.Dialogs</id>
+    <version>1.0.0</version>
+    <authors>Decova.Blazor.Dialogs</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Decova.Blazor" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Components.Web" version="6.0.2" exclude="Build,Analyzers" />
+        <dependency id="PostSharp" version="6.10.8" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="G:\_MyProjects\Decova.Blazor.Dialog\Decova.Blazor.Dialog\bin\Debug\net6.0\Decova.Blazor.Dialogs.dll" target="lib\net6.0\Decova.Blazor.Dialogs.dll" />
+    <file src="G:\_MyProjects\Decova.Blazor.Dialog\Decova.Blazor.Dialog\obj\Debug\net6.0\staticwebassets\msbuild.Decova.Blazor.Dialogs.Microsoft.AspNetCore.StaticWebAssets.props" target="build\Microsoft.AspNetCore.StaticWebAssets.props" />
+    <file src="G:\_MyProjects\Decova.Blazor.Dialog\Decova.Blazor.Dialog\obj\Debug\net6.0\staticwebassets\msbuild.build.Decova.Blazor.Dialogs.props" target="build\Decova.Blazor.Dialogs.props" />
+    <file src="G:\_MyProjects\Decova.Blazor.Dialog\Decova.Blazor.Dialog\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Decova.Blazor.Dialogs.props" target="buildMultiTargeting\Decova.Blazor.Dialogs.props" />
+    <file src="G:\_MyProjects\Decova.Blazor.Dialog\Decova.Blazor.Dialog\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Decova.Blazor.Dialogs.props" target="buildTransitive\Decova.Blazor.Dialogs.props" />
+    <file src="G:\_MyProjects\Decova.Blazor.Dialog\Decova.Blazor.Dialog\obj\Debug\net6.0\scopedcss\projectbundle\Decova.Blazor.Dialogs.bundle.scp.css" target="staticwebassets\Decova.Blazor.Dialogs.bundle.scp.css" />
+    <file src="G:\_MyProjects\Decova.Blazor.Dialog\Decova.Blazor.Dialog\wwwroot\background.png" target="staticwebassets\background.png" />
+    <file src="G:\_MyProjects\Decova.Blazor.Dialog\Decova.Blazor.Dialog\wwwroot\exampleJsInterop.js" target="staticwebassets\exampleJsInterop.js" />
+  </files>
+</package>

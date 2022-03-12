@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.2" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\_MyProjects\Decova.Blazor\Decova.Blazor.csproj" />
+    <ProjectReference Include="..\..\..\..\_MyProjects\Decova.Circuits\Decova.Circuits\Decova.Circuits.csproj" />
+    <ProjectReference Include="..\..\..\..\_MyProjects\Decova.DependencyInjection\Decova.DI\Decova.DependencyInjection.csproj" />
+    <ProjectReference Include="..\Decova.Blazor.Dialog\Decova.Blazor.Dialogs.csproj" />
+  </ItemGroup>
+
+</Project>

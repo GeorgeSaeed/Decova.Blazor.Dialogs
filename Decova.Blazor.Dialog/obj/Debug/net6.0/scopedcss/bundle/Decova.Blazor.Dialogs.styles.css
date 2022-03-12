@@ -1,0 +1,136 @@
+/* _content/Decova.Blazor.Dialogs/Component1.razor.rz.scp.css */
+.my-component[b-1xgmeztr2l] {
+    border: 2px dashed red;
+    padding: 1em;
+    margin: 1em 0;
+    background-image: url('background.png');
+}
+/* _content/Decova.Blazor.Dialogs/Dialog.razor.rz.scp.css */
+.layout[b-ng4lp22qyv] {
+    position: fixed;
+    display: grid;
+    visibility: collapse;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    grid-template-columns: minmax(10%, 1fr) auto minmax(10%, 1fr);
+    grid-template-rows: minmax(10%, 1fr) auto minmax(10%, 1fr);
+    grid-template-areas: "a0 a1 a2"
+        "b0 x b2"
+        "c0 c1 c2";
+}
+
+.curtain[b-ng4lp22qyv] {
+    background-color: #000;
+    grid-row: 1/4;
+    grid-column: 1/4;
+}
+
+.box[b-ng4lp22qyv] {
+    display: grid;
+    position: relative;
+    grid-area: x;
+    width: auto;
+    height: auto;
+    min-width: 200px;
+    min-height: 100px;
+    filter: drop-shadow(2mm -1mm 3mm #2c2b2b);
+
+}
+
+@keyframes curtain-animate-in-b-ng4lp22qyv {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+.curtain.animate-in[b-ng4lp22qyv] {
+    animation-name: curtain-animate-in-b-ng4lp22qyv;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes curtain-animate-out-b-ng4lp22qyv {
+    0% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+.curtain.animate-out[b-ng4lp22qyv] {
+    animation-name: curtain-animate-out-b-ng4lp22qyv;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+
+.layout.open[b-ng4lp22qyv] {
+    visibility: visible;
+}
+
+@keyframes layout-animate-out-b-ng4lp22qyv {
+    0% {
+        visibility: visible;
+    }
+
+    100% {
+        visibility: collapse;
+    }
+}
+
+.layout.closed[b-ng4lp22qyv] {
+    animation: layout-animate-out-b-ng4lp22qyv;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes dialog-box-animate-in-b-ng4lp22qyv {
+    0% {
+        transform: translateY(-90vh) scale(0.4);
+    }
+
+    60% {
+        transform: rotate(-5deg) scale(0.7);
+    }
+
+    100% {
+        transform: translateY(0vh) scale(1) rotate(0deg);
+    }
+}
+.box.animate-in[b-ng4lp22qyv] {
+    animation-name: dialog-box-animate-in-b-ng4lp22qyv;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes dialog-box-animate-out-b-ng4lp22qyv {
+    0% {
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(-5deg) scale(0.7);
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(0.4) rotate(15deg);
+    }
+}
+.box.animate-out[b-ng4lp22qyv] {
+    animation-name: dialog-box-animate-out-b-ng4lp22qyv;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+/*# sourceMappingURL=Dialog.css.map */

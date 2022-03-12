@@ -1,0 +1,15 @@
+﻿<div class=@PRM_Circuit?.LayoutCss
+    <div class=@PRM_Circuit?.CurtainCss 
+         onclick=@OnCurtainClick>
+    </div>
+    <div class=@this.PRM_Circuit?.DialogBodyCss>
+        @if(@SLOT_Body != null)
+        {
+            @SLOT_Body
+        }
+        else
+        {
+            <i>Please fill the content of your dialog as the SLOT_Body parameter</i>
+        }
+    </div>
+</div>

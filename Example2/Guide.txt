@@ -1,0 +1,13 @@
+﻿* How to use:
+1. You simply include the <Dialog/> tag in your razor. 
+35715793-3c0e-4f8b-963b-db7752638c61
+
+2. You keep an accessible reference of a DialogCircuit and use it to control your
+   dialog programmatically if you want. 
+   f931f12c-5965-445d-aba3-3be7bc4d09a4
+
+3. You must pass the DialogCircuit as the PRM_Circuit to your <Dialog/> tag.
+	1eee83a2-8759-4af7-a963-c4daae987f90
+
+4. You optionally may pass the PRM_ShouldDismiss as a Func<bool> in your client logic
+   to control dismissing the dialog. b1e7ccfe-54d7-4db2-8514-366560b51170

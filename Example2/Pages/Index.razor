@@ -1,0 +1,58 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@*35715793-3c0e-4f8b-963b-db7752638c61*@
+<Dialog PRM_Circuit=@U_DialogContainerCircuit.Singleton.DialogCircuit 
+        PRM_ShouldDismiss=@ShouldDismiss>   
+        @*1eee83a2-8759-4af7-a963-c4daae987f90*@
+        @*b1e7ccfe-54d7-4db2-8514-366560b51170*@
+    <SLOT_Body>
+        @*You inject the dialog body you want*@
+        <div style="padding:20px; border:1px solid black; border-radius:20px; background-color:#333333; color:white">
+            <h1>This is a za3bolla dialog</h1>
+            <input id="chk" type="checkbox" @bind="AreWeOK" />
+            <label for="chk" style="cursor: pointer">
+                Are we OK?
+            </label>
+
+            @*You may provide your logic upon which the dialog content is rendered*@
+            @*b1e7ccfe-54d7-4db2-8514-366560b51170*@
+            @if(this.TriedToDismiss)
+            {
+                <p style="color: red; font-style:italic">Please check the "Are we OK?" box first</p>
+            }
+        </div>
+    </SLOT_Body>
+</Dialog>
+
+@code {
+
+    //b1e7ccfe-54d7-4db2-8514-366560b51170
+    private bool AreWeOK { get; set; }
+
+    //b1e7ccfe-54d7-4db2-8514-366560b51170
+    private bool TriedToDismiss { get; set; } = false;
+
+    //b1e7ccfe-54d7-4db2-8514-366560b51170
+    bool ShouldDismiss()
+    {
+        if(!AreWeOK)
+        {
+            this.TriedToDismiss = true;
+            return false;
+        }
+        else
+        {
+            this.TriedToDismiss = false;
+            this.AreWeOK = false;
+            return true;
+        }
+    }
+}
