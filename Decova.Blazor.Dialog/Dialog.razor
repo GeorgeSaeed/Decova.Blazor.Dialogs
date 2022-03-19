@@ -1,11 +1,16 @@
-﻿<div class=@PRM_Circuit?.LayoutCss
+﻿@using Microsoft.JSInterop
+@inject IJSRuntime js
+
+<div onload="console.warn('dialog loaded')"  class=@PRM_Circuit?.LayoutCss>
     <div class=@PRM_Circuit?.CurtainCss 
          onclick=@OnCurtainClick>
     </div>
     <div class=@this.PRM_Circuit?.DialogBodyCss>
+
+
         @if(@SLOT_Body != null)
         {
-            @SLOT_Body
+                @SLOT_Body
         }
         else
         {
@@ -13,3 +18,8 @@
         }
     </div>
 </div>
+
+@code {
+
+    
+}

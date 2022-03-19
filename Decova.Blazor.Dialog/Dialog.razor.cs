@@ -1,32 +1,29 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
+using Newtonsoft.Json.Linq;
 
 namespace Decova.Blazor.Dialogs;
 
-public partial class Dialog
+public partial class Dialog : ComponentBase
 {
-    public Dialog()
-    {
-        
-    }
-
     [Parameter]
     public DialogCircuit PRM_Circuit { get; set; }
 
     [Parameter]
     public Func<bool> PRM_ShouldDismiss { get; set; }
 
-    [Inject]
-    public IJSRuntime Js { get; set; }
+    //[Inject]
+    //public IJSRuntime Js { get; set; }
 
     [Parameter]
     public RenderFragment SLOT_Body { get; set; }
 
-    void OnCurtainClick(MouseEventArgs e)
+    protected void OnCurtainClick(MouseEventArgs e)
     {
         if (this.PRM_ShouldDismiss == null || this.PRM_ShouldDismiss())
         {
+            //js1.Run("alert('hi')");
             this.PRM_Circuit.IsOpen = false;
         }
     }
@@ -34,10 +31,7 @@ public partial class Dialog
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        if(this.PRM_Circuit != null)
-        {
-            this.PRM_Circuit.OnChangedInGlobalStorm(StateHasChanged);
-        }
+        this.PRM_Circuit.OnChangedInGlobalStorm(StateHasChanged);
     }
 }
 

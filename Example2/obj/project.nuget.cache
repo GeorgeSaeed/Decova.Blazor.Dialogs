@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9/6JZzORk+OI7p68/81HFMa5v8udEW0QcNYqsNIQnO43PR528jg0CEuKSxroY+dFNFPR+mSfS71W7HKSC+kMUw==",
+  "dgSpecHash": "WU+ALuwwzQW9UW13sXfvp7jc5t02YBqlhNWqF22PdupNqR/FplrIo2TR2862JzlhFSPvMQkX+eJf3+g7AHLb0w==",
   "success": true,
   "projectFilePath": "G:\\_MyProjects\\Decova.Blazor.Dialog\\Example2\\Example2.csproj",
   "expectedPackageFiles": [
@@ -39,11 +39,9 @@
     "C:\\Users\\George\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\George\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\George\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\George\\.nuget\\packages\\decova.blazor\\1.0.0\\decova.blazor.1.0.0.nupkg.sha512",
-    "C:\\Users\\George\\.nuget\\packages\\decova.blazor.dialogs\\1.0.0\\decova.blazor.dialogs.1.0.0.nupkg.sha512",
-    "C:\\Users\\George\\.nuget\\packages\\decova.circuits\\1.0.0\\decova.circuits.1.0.0.nupkg.sha512",
-    "C:\\Users\\George\\.nuget\\packages\\decova.dependencyinjection\\0.5.0\\decova.dependencyinjection.0.5.0.nupkg.sha512",
-    "C:\\Users\\George\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.2\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.2.nupkg.sha512"
+    "C:\\Users\\George\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\George\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\George\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
   ],
   "logs": []
 }
