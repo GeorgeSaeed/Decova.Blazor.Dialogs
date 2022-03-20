@@ -15,8 +15,8 @@
     width: 100vw;
     height: 100vh;
     z-index: 1000;
-    grid-template-columns: minmax(10%, 1fr) auto minmax(10%, 1fr);
-    grid-template-rows: minmax(10%, 1fr) auto minmax(10%, 1fr);
+    grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
+    grid-template-rows: 1fr auto 1fr;
     grid-template-areas: "a0 a1 a2"
         "b0 x b2"
         "c0 c1 c2";

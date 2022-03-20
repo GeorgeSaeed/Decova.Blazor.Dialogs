@@ -1,35 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Symbols LinesOfCode="85" PostSharpLinesOfCode="0" EnhancedTypesCount="1" SchemaVersion="1" PostSharpVersion="6.10.8.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
   <Class Class="#1=T:[Decova.Circuits]Decova.Circuits.CircuitNodeAttribute">
-    <Instance Declaration="#2=P:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::OnSubmitted()" Id="c23f3c0b6fded14a">
+    <Instance Declaration="#2=P:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::OnSubmitted()" Id="c23f3c0b245b9fda">
       <Target LinesAvoided="6" Tags="premium">
         <JoinPoint Advised="#3=M:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::get_OnSubmitted()" Advising="#1" Description="#4=Intercepted by advice OnGetValue" Semantic="Getter" Ordinal="0" />
         <JoinPoint Advised="#5=M:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::set_OnSubmitted(System.DateTime)" Advising="#1" Description="#6=Intercepted by advice OnSetValue" Semantic="Setter" />
         <JoinPoint Advising="#1" Description="#7=Advice OnInstanceLocationInitialized is called after this location is initialized" Semantic="OnInstanceInitialized" Ordinal="2" />
       </Target>
     </Instance>
-    <Instance Declaration="#8=P:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::IsOpen()" Id="c23f3c0b962d5300">
+    <Instance Declaration="#8=P:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::IsOpen()" Id="c23f3c0b4701f9ec">
       <Target LinesAvoided="6" Tags="premium">
         <JoinPoint Advised="#9=M:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::get_IsOpen()" Advising="#1" Description="#4" Semantic="Getter" Ordinal="3" />
         <JoinPoint Advised="#10=M:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::set_IsOpen(System.Boolean)" Advising="#1" Description="#6" Semantic="Setter" Ordinal="4" />
         <JoinPoint Advising="#1" Description="#7" Semantic="OnInstanceInitialized" Ordinal="5" />
       </Target>
     </Instance>
-    <Instance Declaration="#11=P:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::LayoutCss()" Id="c23f3c0b60b01754">
+    <Instance Declaration="#11=P:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::LayoutCss()" Id="c23f3c0bde6f99de">
       <Target LinesAvoided="6" Tags="premium">
         <JoinPoint Advised="#12=M:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::get_LayoutCss()" Advising="#1" Description="#4" Semantic="Getter" Ordinal="6" />
         <JoinPoint Advised="#13=M:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::set_LayoutCss(System.String)" Advising="#1" Description="#6" Semantic="Setter" Ordinal="7" />
         <JoinPoint Advising="#1" Description="#7" Semantic="OnInstanceInitialized" Ordinal="8" />
       </Target>
     </Instance>
-    <Instance Declaration="#14=P:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::CurtainCss()" Id="c23f3c0baf391fda">
+    <Instance Declaration="#14=P:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::CurtainCss()" Id="c23f3c0b645df16d">
       <Target LinesAvoided="6" Tags="premium">
         <JoinPoint Advised="#15=M:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::get_CurtainCss()" Advising="#1" Description="#4" Semantic="Getter" Ordinal="9" />
         <JoinPoint Advised="#16=M:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::set_CurtainCss(System.String)" Advising="#1" Description="#6" Semantic="Setter" Ordinal="10" />
         <JoinPoint Advising="#1" Description="#7" Semantic="OnInstanceInitialized" Ordinal="11" />
       </Target>
     </Instance>
-    <Instance Declaration="#17=P:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::DialogBodyCss()" Id="c23f3c0be1b8a14f">
+    <Instance Declaration="#17=P:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::DialogBodyCss()" Id="c23f3c0b5493018a">
       <Target LinesAvoided="6" Tags="premium">
         <JoinPoint Advised="#18=M:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::get_DialogBodyCss()" Advising="#1" Description="#4" Semantic="Getter" Ordinal="12" />
         <JoinPoint Advised="#19=M:[Decova.Blazor.Dialogs]Decova.Blazor.Dialogs.DialogCircuit::set_DialogBodyCss(System.String)" Advising="#1" Description="#6" Semantic="Setter" Ordinal="13" />
