@@ -29,6 +29,7 @@ public class DialogCircuit : Circuit
     [CircuitNode]
     public bool IsOpen { get; set; } = false;
 
+
     [CircuitNode(nameof(IsOpen))]
     public string LayoutCss { get; private set; } = "layout";
     string ___LayoutCss()
@@ -59,6 +60,9 @@ public class DialogCircuit : Circuit
 
     [CircuitNode(nameof(IsOpen))]
     public string DialogBodyCss { get; private set; } = "box";
+
+    [CircuitNode]
+    public bool IsBusy { get; set; } = false;
 
     private string ___DialogBodyCss()
     {

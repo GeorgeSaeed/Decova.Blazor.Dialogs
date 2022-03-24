@@ -1,13 +1,12 @@
 ﻿@using Microsoft.JSInterop
 @inject IJSRuntime js
 
-<div onload="console.warn('dialog loaded')"  class=@PRM_Circuit?.LayoutCss>
+<div class=@PRM_Circuit?.LayoutCss>
     <div class=@PRM_Circuit?.CurtainCss 
          onclick=@OnCurtainClick>
+         <div class="@(@PRM_Circuit.IsBusy? "curtain-busy-background":"")"></div>
     </div>
     <div class=@this.PRM_Circuit?.DialogBodyCss>
-
-
         @if(@SLOT_Body != null)
         {
                 @SLOT_Body
