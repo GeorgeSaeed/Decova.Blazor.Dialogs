@@ -9,7 +9,6 @@
       <group targetFramework="net6.0">
         <dependency id="Decova.Blazor" version="1.0.0" exclude="Build,Analyzers" />
         <dependency id="Microsoft.AspNetCore.Components.Web" version="6.0.2" exclude="Build,Analyzers" />
-        <dependency id="PostSharp" version="6.10.8" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>

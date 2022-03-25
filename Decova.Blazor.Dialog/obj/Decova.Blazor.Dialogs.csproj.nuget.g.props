@@ -13,7 +13,4 @@
     <SourceRoot Include="C:\Users\George\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\" />
   </ItemGroup>
-  <ImportGroup Condition="'$(ExcludeRestorePackageImports)' != 'true'">
-    <Import Project="$(NuGetPackageRoot)postsharp\6.10.8\build\PostSharp.props" Condition="Exists('$(NuGetPackageRoot)postsharp\6.10.8\build\PostSharp.props')" />
-  </ImportGroup>
 </Project>

@@ -11,6 +11,10 @@ public class DialogCircuit : Circuit
         this.U_TabGroupsInstaller = u_TabGroupsInstaller;
 
         this.U_TabGroupsInstaller.TabGroupSubmitted += U_TabGroupsInstaller_TabGroupSubmitted;
+
+        this.LayoutCss = "layout";
+        this.CurtainCss = "curtain";
+        this.DialogBodyCss = "box";
     }
 
     private void U_TabGroupsInstaller_TabGroupSubmitted(object sender, U_TabGroupsInstaller.EventArgsTabGroupSubmitted e)
@@ -21,17 +25,35 @@ public class DialogCircuit : Circuit
         }
     }
 
-    [CircuitNode]
-    public DateTime OnSubmitted { get; set; }
+    //[CircuitNode]
+    //public DateTime OnSubmitted { get; set; }
+
+
+    [Node]
+    public DateTime OnSubmitted
+    { get => Get<DateTime>(nameof(OnSubmitted)); set => Set(nameof(OnSubmitted), value); }
+
+
 
     public string TabGroup { get; } = Guid.NewGuid().ToString();
 
-    [CircuitNode]
-    public bool IsOpen { get; set; } = false;
+    //[CircuitNode]
+    //public bool IsOpen { get; set; } = false;
 
 
-    [CircuitNode(nameof(IsOpen))]
-    public string LayoutCss { get; private set; } = "layout";
+    [Node]
+    public bool IsOpen
+    { get => Get<bool>(nameof(IsOpen)); set => Set(nameof(IsOpen), value); }
+
+
+
+    //[CircuitNode(nameof(IsOpen))]
+    //public string LayoutCss { get; private set; } = "layout";
+
+
+    [Node(nameof(IsOpen))]
+    public string LayoutCss
+    { get => Get<string>(nameof(LayoutCss)); set => Set(nameof(LayoutCss), value); }
     string ___LayoutCss()
     {
         switch (IsOpen)
@@ -43,8 +65,13 @@ public class DialogCircuit : Circuit
         }
     }
 
-    [CircuitNode(nameof(IsOpen))]
-    public string CurtainCss { get; private set; } = "curtain";
+    //[CircuitNode(nameof(IsOpen))]
+    //public string CurtainCss { get; private set; } = "curtain";
+
+
+    [Node(nameof(IsOpen))]
+    public string CurtainCss
+    { get => Get<string>(nameof(CurtainCss)); set => Set(nameof(CurtainCss), value); }
     string ___CurtainCss()
     {
         Console.WriteLine("___CurtainCss");
@@ -56,14 +83,16 @@ public class DialogCircuit : Circuit
                 return "curtain animate-in";
         }
     }
+    
+    
     public U_TabGroupsInstaller U_TabGroupsInstaller { get; }
 
-    [CircuitNode(nameof(IsOpen))]
-    public string DialogBodyCss { get; private set; } = "box";
+    //[CircuitNode(nameof(IsOpen))]
+    //public string DialogBodyCss { get; private set; } = "box";
 
-    [CircuitNode]
-    public bool IsBusy { get; set; } = false;
-
+    [Node(nameof(IsOpen))]
+    public string DialogBodyCss
+    { get => Get<string>(nameof(DialogBodyCss)); set => Set(nameof(DialogBodyCss), value); }
     private string ___DialogBodyCss()
     {
         Console.WriteLine("___DialogBodyCss");
@@ -75,6 +104,10 @@ public class DialogCircuit : Circuit
                 return "box animate-in";
         }
     }
+
+    [Node]
+    public bool IsBusy
+    { get => Get<bool>(nameof(IsBusy)); set => Set(nameof(IsBusy), value); }
 
 
     protected override void OnLocalStormResolved(IEnumerable<NodeChange> changedProperties)
