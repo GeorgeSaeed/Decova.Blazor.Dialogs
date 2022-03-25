@@ -3,9 +3,9 @@ using Newtonsoft.Json.Linq;
 
 namespace Decova.Blazor.Dialogs;
 
-public class DialogCircuit : Circuit
+public class T_Dialog : Circuit
 {
-    public DialogCircuit(U_TabGroupsInstaller u_TabGroupsInstaller)
+    public T_Dialog(U_TabGroupsInstaller u_TabGroupsInstaller)
     {
         Console.WriteLine("DialogCircuit constructor");
         this.U_TabGroupsInstaller = u_TabGroupsInstaller;
@@ -19,14 +19,11 @@ public class DialogCircuit : Circuit
 
     private void U_TabGroupsInstaller_TabGroupSubmitted(object sender, U_TabGroupsInstaller.EventArgsTabGroupSubmitted e)
     {
-        if(e.TabGroup == this.TabGroup)
+        if(e.TabGroup == this._TabGroup)
         {
             this.OnSubmitted = DateTime.Now;
         }
     }
-
-    //[CircuitNode]
-    //public DateTime OnSubmitted { get; set; }
 
 
     [Node]
@@ -34,21 +31,9 @@ public class DialogCircuit : Circuit
     { get => Get<DateTime>(nameof(OnSubmitted)); set => Set(nameof(OnSubmitted), value); }
 
 
-
-    public string TabGroup { get; } = Guid.NewGuid().ToString();
-
-    //[CircuitNode]
-    //public bool IsOpen { get; set; } = false;
-
-
     [Node]
     public bool IsOpen
     { get => Get<bool>(nameof(IsOpen)); set => Set(nameof(IsOpen), value); }
-
-
-
-    //[CircuitNode(nameof(IsOpen))]
-    //public string LayoutCss { get; private set; } = "layout";
 
 
     [Node(nameof(IsOpen))]
@@ -65,8 +50,6 @@ public class DialogCircuit : Circuit
         }
     }
 
-    //[CircuitNode(nameof(IsOpen))]
-    //public string CurtainCss { get; private set; } = "curtain";
 
 
     [Node(nameof(IsOpen))]
@@ -87,8 +70,7 @@ public class DialogCircuit : Circuit
     
     public U_TabGroupsInstaller U_TabGroupsInstaller { get; }
 
-    //[CircuitNode(nameof(IsOpen))]
-    //public string DialogBodyCss { get; private set; } = "box";
+    public readonly string _TabGroup = Guid.NewGuid().ToString();
 
     [Node(nameof(IsOpen))]
     public string DialogBodyCss
@@ -124,7 +106,7 @@ public class DialogCircuit : Circuit
             {
                 Task.Delay(800).ContinueWith(t =>
                 {
-                    this.U_TabGroupsInstaller.FocusGroup(this.TabGroup);
+                    this.U_TabGroupsInstaller.FocusGroup(this._TabGroup);
                 });
             }
         }

@@ -1,19 +1,34 @@
 ﻿@using Microsoft.JSInterop
 @inject IJSRuntime js
+@inherits CircuitView<T_Dialog>
 
-<div class=@PRM_Circuit?.LayoutCss>
-    <div class=@PRM_Circuit?.CurtainCss 
+@code {
+    
+    [Parameter]
+    public RenderFragment SLOT_Body { get; set; }
+
+    [Parameter]
+    public Func<bool> PRM_ShouldDismiss { get; set; }
+
+    private void OnCurtainClick(MouseEventArgs e)
+    {
+        if (this.PRM_ShouldDismiss == null || this.PRM_ShouldDismiss())
+        {
+            //js1.Run("alert('hi')");
+            this.Circuit.IsOpen = false;
+        }
+    }
+
+
+    string getBusyClass () => Circuit.IsBusy ? "curtain-busy-background" : "";
+}
+
+<div class=@Circuit.LayoutCss>
+    <div class=@Circuit.CurtainCss 
          onclick="@OnCurtainClick">
-         <div class="@(@PRM_Circuit.IsBusy? "curtain-busy-background":"")"></div>
+         <div class="@getBusyClass()"></div>
     </div>
-    <div class=@this.PRM_Circuit?.DialogBodyCss>
-        @if(@SLOT_Body != null)
-        {
+    <div class=@Circuit.DialogBodyCss>
            @SLOT_Body
-        }
-        else
-        {
-            <i>Please fill the content of your dialog as the SLOT_Body parameter</i>
-        }
     </div>
 </div>
