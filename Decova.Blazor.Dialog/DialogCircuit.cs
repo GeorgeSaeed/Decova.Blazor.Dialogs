@@ -5,6 +5,8 @@ namespace Decova.Blazor.Dialogs;
 
 public class T_Dialog : Circuit
 {
+    private static int _nextZIndex = 1000;
+
     public T_Dialog(U_TabGroupsInstaller u_TabGroupsInstaller)
     {
         Console.WriteLine("DialogCircuit constructor");
@@ -57,7 +59,7 @@ public class T_Dialog : Circuit
     { get => Get<string>(nameof(CurtainCss)); set => Set(nameof(CurtainCss), value); }
     string ___CurtainCss()
     {
-        Console.WriteLine("___CurtainCss");
+        //Console.WriteLine("___CurtainCss");
         switch (IsOpen)
         {
             case false:
@@ -77,7 +79,7 @@ public class T_Dialog : Circuit
     { get => Get<string>(nameof(DialogBodyCss)); set => Set(nameof(DialogBodyCss), value); }
     private string ___DialogBodyCss()
     {
-        Console.WriteLine("___DialogBodyCss");
+        //Console.WriteLine("___DialogBodyCss");
         switch (this.IsOpen)
         {
             case false:
@@ -92,11 +94,28 @@ public class T_Dialog : Circuit
     { get => Get<bool>(nameof(IsBusy)); set => Set(nameof(IsBusy), value); }
 
 
+    [Node(nameof(IsOpen))]
+    public int ZIndex
+    { get => Get<int>(nameof(ZIndex)); set => Set(nameof(ZIndex), value); }
+    int ___ZIndex()
+    {
+        if(this.IsOpen)
+        {
+            _nextZIndex++;
+            return _nextZIndex;
+        }
+        else
+        {
+            return this.ZIndex;
+        }
+    }
+
+
     protected override void OnLocalStormResolved(IEnumerable<NodeChange> changedProperties)
     {
         base.OnLocalStormResolved(changedProperties);
 
-        Console.WriteLine("DialogBodyCss = " + DialogBodyCss);
+        //Console.WriteLine("DialogBodyCss = " + DialogBodyCss);
 
         #region focus first input
         //####################################################################

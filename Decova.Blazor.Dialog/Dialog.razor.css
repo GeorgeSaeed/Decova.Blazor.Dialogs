@@ -58,10 +58,11 @@
     }
 }
 .curtain.animate-out {
-    animation-name: curtain-animate-out;
-    animation-duration: 500ms;
+/*    animation-name: curtain-animate-out;
+    animation-duration: 10ms;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;*/
+    opacity: 0;
 }
 
 

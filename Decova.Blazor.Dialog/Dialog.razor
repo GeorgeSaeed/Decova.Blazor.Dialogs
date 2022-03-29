@@ -23,8 +23,9 @@
     string getBusyClass () => Circuit.IsBusy ? "curtain-busy-background" : "";
 }
 
-<div class=@Circuit.LayoutCss>
-    <div class=@Circuit.CurtainCss 
+<div style="z-index:@Circuit.ZIndex" class=@Circuit.LayoutCss>
+    <div class=@Circuit.CurtainCss
+         
          onclick="@OnCurtainClick">
          <div class="@getBusyClass()"></div>
     </div>
