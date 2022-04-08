@@ -123,7 +123,7 @@ public class T_Dialog : Circuit
         {
             if (this.IsOpen)
             {
-                Task.Delay(800).ContinueWith(t =>
+                Task.Delay(500).ContinueWith(t =>
                 {
                     this.U_TabGroupsInstaller.FocusGroup(this._TabGroup);
                 });
