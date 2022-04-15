@@ -3,7 +3,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Decova.Blazor.Dialogs;
 
-public class T_Dialog : Circuit
+public class T_Dialog : TransientCircuit<T_Dialog>
 {
     private static int _nextZIndex = 1000;
 

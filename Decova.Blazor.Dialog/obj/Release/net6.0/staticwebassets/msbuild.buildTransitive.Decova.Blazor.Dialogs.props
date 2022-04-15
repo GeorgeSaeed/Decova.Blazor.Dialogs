@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Decova.Blazor.Dialogs.props" />
+</Project>
