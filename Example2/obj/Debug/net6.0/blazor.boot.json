@@ -204,7 +204,7 @@
       "Decova.Blazor.dll": "sha256-v68bHyVuP1wbQotjKJNjPRBg1CfA7vsav4P8JDHOTLw=",
       "Decova.Circuits.dll": "sha256-p17jnvtOH1OqLTs1NKjhfVLkoRtKQMCoug2BrPiR1eE=",
       "Decova.DependencyInjection.dll": "sha256-Tc2N8PKZ\/LUTbbnOtGuOPfkuCd7+P+07mJ8Gx3A\/BJU=",
-      "Example2.dll": "sha256-5gx4HcY5pHcVz\/d016um3Oa\/UtXdIiJMJv0lLTO3LLM="
+      "Example2.dll": "sha256-cpMnfF5lBjjvCXUJ2XMcV+mvgi0eH3n5Bzcc9+sgsb4="
     },
     "extensions": null,
     "lazyAssembly": null,
@@ -214,7 +214,7 @@
       "Decova.Circuits.pdb": "sha256-nFFtnox2p+l3qRmZNkFHE+nH5vPjdmAntGA7JXhVP74=",
       "Decova.DependencyInjection.pdb": "sha256-R+VHFQPhhnzBvOnYZZNVYzC+Q3tQRv4h2j4k53fwvtQ=",
       "Decova.Blazor.Dialogs.pdb": "sha256-UwjX5S6\/NtwiG\/8FEgI+bmhMU7YBcmSIrkspho6j3KM=",
-      "Example2.pdb": "sha256-WvpYLVm1Ix6qU9Mtk\/LN8Wxq9Yd7O9V6pn0Nha7bi\/Y="
+      "Example2.pdb": "sha256-CmZ0vBT2tjpWQL+1Z6zfD6PJnxHMhKbgpOKlqo4mKQQ="
     },
     "runtime": {
       "dotnet.6.0.3.k4rg04dpep.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",
