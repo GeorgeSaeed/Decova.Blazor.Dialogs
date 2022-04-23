@@ -38,9 +38,10 @@ public class T_Dialog : TransientCircuit<T_Dialog>
     { get => Get<bool>(nameof(IsOpen)); set => Set(nameof(IsOpen), value); }
 
 
-    [Node(nameof(IsOpen))]
+    [Node]
     public string LayoutCss
     { get => Get<string>(nameof(LayoutCss)); set => Set(nameof(LayoutCss), value); }
+    [Watch(nameof(IsOpen))]
     string ___LayoutCss()
     {
         switch (IsOpen)
@@ -54,9 +55,10 @@ public class T_Dialog : TransientCircuit<T_Dialog>
 
 
 
-    [Node(nameof(IsOpen))]
+    [Node]
     public string CurtainCss
     { get => Get<string>(nameof(CurtainCss)); set => Set(nameof(CurtainCss), value); }
+    [Watch(nameof(IsOpen))]
     string ___CurtainCss()
     {
         //Console.WriteLine("___CurtainCss");
@@ -74,9 +76,10 @@ public class T_Dialog : TransientCircuit<T_Dialog>
 
     public readonly string _TabGroup = Guid.NewGuid().ToString();
 
-    [Node(nameof(IsOpen))]
+    [Node]
     public string DialogBodyCss
     { get => Get<string>(nameof(DialogBodyCss)); set => Set(nameof(DialogBodyCss), value); }
+    [Watch(nameof(IsOpen))]
     private string ___DialogBodyCss()
     {
         //Console.WriteLine("___DialogBodyCss");
@@ -94,9 +97,10 @@ public class T_Dialog : TransientCircuit<T_Dialog>
     { get => Get<bool>(nameof(IsBusy)); set => Set(nameof(IsBusy), value); }
 
 
-    [Node(nameof(IsOpen))]
+    [Node]
     public int ZIndex
     { get => Get<int>(nameof(ZIndex)); set => Set(nameof(ZIndex), value); }
+    [Watch(nameof(IsOpen))]
     int ___ZIndex()
     {
         if(this.IsOpen)
