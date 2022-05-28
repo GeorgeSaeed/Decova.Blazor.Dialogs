@@ -21,7 +21,7 @@ public class T_Dialog : TransientCircuit<T_Dialog>
 
     private void U_TabGroupsInstaller_TabGroupSubmitted(object sender, U_TabGroupsInstaller.EventArgsTabGroupSubmitted e)
     {
-        if(e.TabGroup == this._TabGroup)
+        if(e.TabGroup == this.TabGroup)
         {
             this.OnSubmitted = DateTime.Now;
         }
@@ -74,7 +74,7 @@ public class T_Dialog : TransientCircuit<T_Dialog>
     
     public U_TabGroupsInstaller U_TabGroupsInstaller { get; }
 
-    public readonly string _TabGroup = Guid.NewGuid().ToString();
+    public readonly string TabGroup = Guid.NewGuid().ToString();
 
     [Node]
     public string DialogBodyCss
@@ -129,7 +129,7 @@ public class T_Dialog : TransientCircuit<T_Dialog>
             {
                 Task.Delay(500).ContinueWith(t =>
                 {
-                    this.U_TabGroupsInstaller.FocusGroup(this._TabGroup);
+                    this.U_TabGroupsInstaller.FocusGroup(this.TabGroup);
                 });
             }
         }
