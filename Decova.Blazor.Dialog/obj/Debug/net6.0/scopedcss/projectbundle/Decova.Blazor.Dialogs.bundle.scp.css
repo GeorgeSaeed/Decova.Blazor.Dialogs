@@ -25,6 +25,7 @@
 }
 
 .curtain[b-ng4lp22qyv] {
+    opacity: 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -59,7 +60,10 @@
     animation-name: curtain-animate-in-b-ng4lp22qyv;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+
+    /*opacity: .7;*/
 }
 
 @keyframes curtain-animate-out-b-ng4lp22qyv {
@@ -72,11 +76,12 @@
     }
 }
 .curtain.animate-out[b-ng4lp22qyv] {
-/*    animation-name: curtain-animate-out;
+    animation-name: curtain-animate-out-b-ng4lp22qyv;
+    animation-duration: 700ms;
     animation-duration: 10ms;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;*/
-    opacity: 0;
+    animation-timing-function: ease-out;
+    /*opacity: 0;*/
 }
 
 
